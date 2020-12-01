@@ -1,0 +1,21 @@
+{
+  "name": "target-instore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "mashape-oauth": "^0.1.71",
+    "node-fetch": "^2.6.1",
+    "oauth-1.0a": "^2.2.6"
+  },
+  "scripts": {
+    "start": "node -r esm main.js"
+  }
+}
