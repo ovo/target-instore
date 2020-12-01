@@ -26,7 +26,7 @@ export default async function init(productCode, zipCode, prevLocations) {
       accessToken: process.env.ACCESS_TOKEN,
       accessSecret: process.env.ACCESS_SECRET,
       recipient: process.env.RECIPIENT,
-      message: location.store_name,
+      message: `Status change at ${location.store_name}: https://target.com/p/A-${productCode}`,
     });
   }));
 
@@ -39,4 +39,4 @@ export default async function init(productCode, zipCode, prevLocations) {
   return init(productCode, zipCode, locations);
 }
 
-init(81114595, 60111, []);
+// init(81114595, 60641, []);
