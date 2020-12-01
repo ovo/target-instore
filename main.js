@@ -17,6 +17,14 @@ export default async function init(productCode, zipCode, prevLocations) {
     .catch(async (e) => {
       console.log(e);
       await delay(5000);
+      await sendMessage({
+        apiKey: process.env.API_KEY,
+        apiSecret: process.env.API_SECRET,
+        accessToken: process.env.ACCESS_TOKEN,
+        accessSecret: process.env.ACCESS_SECRET,
+        recipient: process.env.RECIPIENT,
+        message: 'Error during request',
+      });
       return init(productCode, zipCode, prevLocations);
     });
   await Promise.all(locations.map(async (location) => {
