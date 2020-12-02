@@ -8,7 +8,7 @@ export const available = (location) => {
   if (location.ship_to_store.availability_status !== 'UNAVAILABLE') {
     return true;
   }
-  if (location.in_store_only.availability_status !== 'OUT_OF_STOCK') {
+  if (location.in_store_only.availability_status !== 'OUT_OF_STOCK' && location.in_store_only.availability_status !== 'NOT_SOLD_IN_STORE') {
     return true;
   }
 

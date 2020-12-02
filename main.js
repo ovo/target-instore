@@ -51,4 +51,4 @@ export default async function init(productCode, zipCode, prevLocations) {
   return init(productCode, zipCode, locations);
 }
 
-init(81114595, 60641, []);
+// init(81114595, 60641, []);
