@@ -9,10 +9,9 @@ const {
   API_SECRET: apiSecret,
   ACCESS_TOKEN: accessToken,
   ACCESS_SECRET: accessSecret,
-  RECIPIENT: recipient,
 } = process.env;
 
-export default async function init(productCode, zipCode, prevLocations) {
+export default async function init(productCode, zipCode, prevLocations, recipient) {
   const locations = [];
   await fetch(`https://api.target.com/fulfillment_aggregator/v1/fiats/${productCode}?key=ff457966e64d5e877fdbad070f276d18ecec4a01&nearby=${zipCode}&limit=20&requested_quantity=1&radius=50&fulfillment_test_mode=grocery_opu_team_member_test`)
     .then((res) => res.json())
@@ -51,4 +50,4 @@ export default async function init(productCode, zipCode, prevLocations) {
   return init(productCode, zipCode, locations);
 }
 
-// init(81114595, 60641, []);
+// init(81114595, 60641, [], 25820398540);
