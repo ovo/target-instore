@@ -1,4 +1,4 @@
-# target-instore
+# target-instore 🎯
 Monitor for Target in store pickup
 
 ## Usage
