@@ -13,7 +13,8 @@
     "esm": "^3.2.25",
     "mashape-oauth": "^0.1.71",
     "node-fetch": "^2.6.1",
-    "oauth-1.0a": "^2.2.6"
+    "oauth-1.0a": "^2.2.6",
+    "yaml": "^1.10.0"
   },
   "scripts": {
     "start": "node -r esm main.js"
